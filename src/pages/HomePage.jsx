@@ -16,7 +16,7 @@ const HomePage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const position = window.scrollY;
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       setScrollPosition(position);
 
       const targetScroll = 1140;
