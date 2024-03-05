@@ -2,8 +2,10 @@ import React from "react";
 import HeaderNavBar from "../component/HeaderNavBar";
 import Footer from "../component/Footer";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [iconVisible, setIconVisible] = useState(false);
   const [timeVisible, setTimeVisible] = useState({
@@ -14,6 +16,7 @@ const HomePage = () => {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const position = window.scrollY;
       // console.log(window.scrollY);
@@ -41,6 +44,21 @@ const HomePage = () => {
 
   return (
     <div className="relative w-screen text-center">
+      {/* Navbar */}
+      <HeaderNavBar />
+      {/* 主標題 */}
+      <div className="absolute left-[35vw] top-[30vh] z-10 text-[65px] font-black tracking-[0.3em] text-white">
+        <p className="">
+          I<span className="text-[#00D646]">'</span>m
+        </p>
+        <p className="">REX</p>
+        <p className="">
+          CHEN<span className="text-[#00D646]">.</span>
+        </p>
+        <p className="mt-10 text-[30px] font-thin tracking-[0.2em]">
+          FRONT-END DEVELOPER
+        </p>
+      </div>
       {/* 簡介 */}
       <div className=" absolute top-[800px] z-10 mx-[320px] h-[800px] bg-[#333B50] p-20">
         <section className="flex flex-col gap-14">
@@ -241,9 +259,14 @@ const HomePage = () => {
             <div className="flex flex-col gap-5">
               <div className="mx-[280px] flex flex-col gap-y-10 rounded-[80px] bg-white/45 px-20 py-10">
                 <p className="text-justify text-xl leading-8 tracking-widest text-white">
-                  ​我和夥伴（一個兩人小組）都是排球運動背景，​因此對排球圈的功能需求非常了解，在經過詳細的調研和問券調查驗證後，我們決定打造一個快速組隊及尋找球場的平台，專為需要尋找隊友的排球愛好者而設，我們的目標是消除揪團組隊所帶來的阻礙，讓出門運動變得更加順暢！
+                  ​我和夥伴（兩人小組）都是排球運動背景，​因此對排球圈的功能需求非常了解，在經過詳細的調研和問券調查驗證後，我們決定打造一個快速組隊及尋找球場的平台，專為需要尋找隊友的排球愛好者而設，我們的目標是消除揪團組隊所帶來的阻礙，讓出門運動變得更加順暢！
                 </p>
-                <button className="mx-auto border-[1px] border-[#FFD96D] bg-[#333B4F] px-4 py-[4px] text-lg text-[#FFD96D] transition duration-300 hover:border-[#333B4F] hover:bg-[#FFBC12] hover:text-[#333B4F]">
+                <button
+                  onClick={() => {
+                    navigate("/project");
+                  }}
+                  className="mx-auto border-[1px] border-[#FFD96D] bg-[#333B4F] px-4 py-[4px] text-lg text-[#FFD96D] transition duration-300 hover:border-[#333B4F] hover:bg-[#FFBC12] hover:text-[#333B4F]"
+                >
                   專案介紹{" >"}
                 </button>
                 <div className="overflow-hidden rounded-[40px]">
@@ -261,7 +284,7 @@ const HomePage = () => {
         </h2>
         <div className="flex flex-col items-center text-lg font-thin leading-10 tracking-wider text-white/70">
           <p>
-            歡迎任何合作邀約或接案機會！
+            歡迎任何工作邀約或接案機會！
             <br />
             若您有任何合作計畫或專案需求，請隨時與我聯繫
           </p>
@@ -308,27 +331,7 @@ const HomePage = () => {
           // 視差效果
           style={{ transform: `translateY(${scrollPosition * 0.6}px)` }}
         >
-          <div className="absolute left-0 top-0 h-full w-full bg-[#324158] opacity-50">
-            {/* nav背景 */}
-            <div className="absolute left-0 top-0 h-20 w-full bg-white bg-opacity-10 shadow-md">
-              <main className="px-40 py-5">
-                <HeaderNavBar />
-              </main>
-            </div>
-          </div>
-        </div>
-        {/* 主標題 */}
-        <div className="absolute left-[35vw] top-[30vh] text-[65px] font-black tracking-[0.3em] text-white">
-          <p className="">
-            I<span className="text-[#00D646]">'</span>m
-          </p>
-          <p className="">REX</p>
-          <p className="">
-            CHEN<span className="text-[#00D646]">.</span>
-          </p>
-          <p className="mt-10 text-[30px] font-thin tracking-[0.2em]">
-            FRONT-END DEVELOPER
-          </p>
+          <div className="absolute left-0 top-0 h-full w-full bg-[#324158] opacity-50"></div>
         </div>
       </div>
 
