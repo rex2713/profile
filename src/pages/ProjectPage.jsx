@@ -158,7 +158,7 @@ const ProjectPage = () => {
               <div className="px-8 text-center font-thin leading-10 tracking-wide text-white">
                 <p className="pb-2 text-xl font-normal">使用者帳戶</p>
                 <p>
-                  進入球場頁面，可看到目前所有台北市的排球場，地圖上緣有地區按鈕，點擊可滑動到該區域，另詳細資料按鈕，點擊可進入球場詳細資料頁面。
+                  進入球場頁面，可看到目前所有台北市的排球場，地圖上緣有地區按鈕，點擊可滑動到該區域。另有詳細資料按鈕，點擊可進入球場詳細資料頁面。
                 </p>
               </div>
               <img
