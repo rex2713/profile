@@ -245,7 +245,7 @@ const HomePage = () => {
                 ​自學基礎後端＆專案前期調研
               </p>
               <p className="text-lg font-light tracking-wider text-white">
-                專案前期調研、Udemy線上課程同步自學（Node.js、Express.js、MongoDB）
+                專案前期調研、同步自學基礎後端（Node.js、Express.js、MongoDB）
               </p>
               <p className="text-justify text-base font-thin tracking-wider text-white">
                 因為想讓最後的專案成果有更多的實用性與交互功能，故決定開始自學後端相關知識來進行專案開發，同時也同步進行專案主題的前期調研工作，詳情簡報可點選此連結：

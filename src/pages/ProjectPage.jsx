@@ -192,7 +192,7 @@ const ProjectPage = () => {
             組隊系統
           </h3>
           <p className="px-40 text-center font-thin leading-10 tracking-wide text-white">
-            使用MongoDB建立隊伍、使用者、及球場資料庫，並使用Express進行伺服器架設。非會員用戶僅可查看目前隊伍列表，如想加入隊伍或是創建隊伍需登入帳戶後可操作。
+            使用MongoDB建立隊伍、使用者、及球場資料庫，並使用Express進行伺服器架設。非會員用戶僅可查看目前隊伍列表，如想使用加入隊伍或是創建隊伍功能需登入帳戶後，才可操作。
           </p>
           <img
             className="mx-auto mt-4 rounded-3xl"
