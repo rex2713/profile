@@ -2,10 +2,12 @@ import React from "react";
 import HeaderNavBar from "../component/HeaderNavBar";
 import Footer from "../component/Footer";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useRef } from "react";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [iconVisible, setIconVisible] = useState(false);
   const [timeVisible, setTimeVisible] = useState({
@@ -42,13 +44,52 @@ const HomePage = () => {
     };
   }, []);
 
+  const professionRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+  //點擊按鈕滑動到專業技能函式
+  const scrollToProfession = () => {
+    // if (location.pathname !== "/") {
+    //   // 如果不在首页，跳转回首页
+    //   navigate("/");
+    // }
+    if (professionRef.current) {
+      professionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+  //點擊按鈕滑動到專案時間軸函式
+  const scrollToProject = () => {
+    if (projectRef.current) {
+      projectRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+  //點擊按鈕滑動到聯絡方式函式
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="relative w-screen text-center">
       {/* Navbar */}
-      <HeaderNavBar />
+      <HeaderNavBar
+        scrollToProfession={scrollToProfession}
+        scrollToProject={scrollToProject}
+        scrollToContact={scrollToContact}
+      />
       {/* 主標題 */}
       <div className="absolute left-[35vw] top-[30vh] z-10 text-[65px] font-black tracking-[0.3em] text-white">
-        <p className="">
+        <p>
           I<span className="text-[#00D646]">'</span>m
         </p>
         <p className="">REX</p>
@@ -85,7 +126,10 @@ const HomePage = () => {
         </section>
       </div>
       {/* Profession skill */}
-      <div className="absolute left-0 right-0 top-[1700px] z-10 flex flex-col gap-5">
+      <div
+        ref={professionRef}
+        className="absolute left-0 right-0 top-[1700px] z-10 flex flex-col gap-5"
+      >
         <h2 className="text-[50px] font-extrabold tracking-[0.2em] text-white">
           01 PROFESSIONAL
         </h2>
@@ -146,7 +190,10 @@ const HomePage = () => {
         </div>
       </div>
       {/* Project */}
-      <div className="absolute left-0 right-0 top-[2500px] z-10 flex flex-col gap-5">
+      <div
+        ref={projectRef}
+        className="absolute left-0 right-0 top-[2500px] z-10 flex flex-col gap-5"
+      >
         <h2 className="text-[50px] font-extrabold tracking-[0.2em] text-white">
           02 PROJECT
         </h2>
@@ -278,7 +325,10 @@ const HomePage = () => {
         </div>
       </div>
       {/* Contact */}
-      <div className="absolute left-0 right-0 top-[4450px] z-10 mx-[300px] h-[500px] bg-[#333B4F] text-center ">
+      <div
+        ref={contactRef}
+        className="absolute left-0 right-0 top-[4450px] z-10 mx-[300px] h-[500px] bg-[#333B4F] text-center "
+      >
         <h2 className="py-8 text-[40px] font-semibold tracking-[0.1em] text-white">
           CONTACT
         </h2>
@@ -289,7 +339,12 @@ const HomePage = () => {
             若您有任何合作計畫或專案需求，請隨時與我聯繫
           </p>
           <div className="text-left tracking-widest text-white">
-            <p>Gmail: rex2713@gmail.com</p>
+            <a
+              className="hover:text-yellow-300"
+              href="mailto:rex2713@gmail.com"
+            >
+              Gmail: rex2713@gmail.com
+            </a>
             <p>Tel: 0937675528</p>
           </div>
           <br />
