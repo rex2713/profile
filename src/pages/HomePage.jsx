@@ -17,6 +17,8 @@ const HomePage = () => {
     timeFour: false,
   });
 
+  const windowWidth = window.innerWidth;
+
   useEffect(() => {
     // window.scrollTo(0, 0);
     const handleScroll = () => {
@@ -240,7 +242,7 @@ const HomePage = () => {
           >
             <article
               className={`absolute -top-2 left-8 w-[280px] text-left duration-[2s] lg:-left-[440px] lg:w-[400px] lg:text-right
-              ${timeVisible.timeTwo ? "translate-x-0" : "translate-x-full"}`}
+              ${timeVisible.timeTwo ? "translate-x-0" : windowWidth > 1080 ? "translate-x-full" : "-translate-x-full"}`}
             >
               <p className="text-sm tracking-wider text-[#00D646] lg:text-base">
                 2023.12-2024.01
@@ -269,16 +271,16 @@ const HomePage = () => {
             ${timeVisible.timeThree ? "opacity-100" : "opacity-0"}`}
           >
             <article
-              className={`absolute -top-2 left-14 w-[400px] text-left duration-[2s]
+              className={`absolute -top-2 left-8 w-[280px] text-left duration-[2s] lg:left-14 lg:w-[400px]
             ${timeVisible.timeThree ? "translate-x-0" : "-translate-x-full"}`}
             >
-              <p className="tracking-wider text-[#00D646]">
+              <p className="text-sm tracking-wider text-[#00D646] lg:text-base">
                 2024.01~2023.02.22(持續更新中)
               </p>
-              <p className="my-2 text-nowrap text-2xl tracking-wider text-white">
+              <p className="my-2 text-nowrap text-xl tracking-wider text-white lg:text-2xl">
                 ​專案製作
               </p>
-              <p className="text-nowrap text-lg font-light tracking-wider text-white">
+              <p className="text-nowrap text-base font-light tracking-wider text-white lg:text-lg">
                 完整的MERN專案​
               </p>
               <p className="text-base font-thin tracking-wider text-white">
@@ -293,13 +295,13 @@ const HomePage = () => {
           ></div>
         </div>
         <h2
-          className={`mt-8 text-center text-2xl font-medium  tracking-widest text-white duration-[2s]
+          className={`ml-8 mt-4 text-left text-xl font-medium tracking-widest text-white duration-[2s] lg:ml-0  lg:mt-8 lg:text-center lg:text-2xl
         ${timeVisible.timeFour ? "opacity-100" : "opacity-0"}`}
         >
           設計理念
         </h2>
         <div
-          className={` overflow-hidden transition-all delay-[1s] duration-[2s] ease-in-out
+          className={`overflow-hidden transition-all delay-[1s] duration-[2s] ease-in-out
           ${timeVisible.timeFour ? "h-[800px]" : "h-0"}
           `}
         >
@@ -308,19 +310,19 @@ const HomePage = () => {
           ${timeVisible.timeFour ? "opacity-100" : "opacity-0"}`}
           >
             <div className="flex flex-col gap-5">
-              <div className="mx-[280px] flex flex-col gap-y-10 rounded-[80px] bg-white/45 px-20 py-10">
-                <p className="text-justify text-xl leading-8 tracking-widest text-white">
+              <div className="mx-8 flex flex-col gap-y-4 rounded-2xl bg-white/45 px-4 py-2 lg:mx-[280px] lg:gap-y-8 lg:rounded-[80px] lg:px-20 lg:py-10">
+                <p className="text-justify text-sm font-light leading-8 tracking-widest text-white lg:text-xl lg:font-normal">
                   ​我和夥伴（兩人小組）都是排球運動背景，​因此對排球圈的功能需求非常了解，在經過詳細的調研和問券調查驗證後，我們決定打造一個快速組隊及尋找球場的平台，專為需要尋找隊友的排球愛好者而設，我們的目標是消除揪團組隊所帶來的阻礙，讓出門運動變得更加順暢！
                 </p>
                 <button
                   onClick={() => {
                     navigate("/project");
                   }}
-                  className="mx-auto border-[1px] border-[#FFD96D] bg-[#333B4F] px-4 py-[4px] text-lg text-[#FFD96D] transition duration-300 hover:border-[#333B4F] hover:bg-[#FFBC12] hover:text-[#333B4F]"
+                  className="mx-auto rounded-lg border-[1px] border-[#FFD96D] bg-[#333B4F] px-2 py-1 text-sm text-[#FFD96D] transition duration-300 hover:border-[#333B4F] hover:bg-[#FFBC12] hover:text-[#333B4F] lg:px-4 lg:py-1 lg:text-lg"
                 >
                   專案介紹{" >"}
                 </button>
-                <div className="overflow-hidden rounded-[40px]">
+                <div className="overflow-hidden rounded-[14px] lg:rounded-[40px]">
                   <img src="/homePage.gif" alt="展示首頁操作" />
                 </div>
               </div>
@@ -331,12 +333,12 @@ const HomePage = () => {
       {/* Contact */}
       <div
         ref={contactRef}
-        className="absolute left-0 right-0 top-[4450px] z-10 mx-[300px] h-[500px] bg-[#333B4F] text-center "
+        className="absolute left-0 right-0 top-[4000px] z-10 mx-10 bg-[#333B4F] pb-10 pt-0 text-center lg:top-[4450px] lg:mx-[300px] lg:h-[500px] lg:pt-10 "
       >
-        <h2 className="py-8 text-[40px] font-semibold tracking-[0.1em] text-white">
+        <h2 className="py-8 text-2xl font-semibold tracking-[0.1em] text-white lg:text-[40px]">
           CONTACT
         </h2>
-        <div className="flex flex-col items-center text-lg font-thin leading-10 tracking-wider text-white/70">
+        <div className="mx-6 flex flex-col items-center text-base font-thin leading-6 tracking-wider text-white/70 lg:mx-0 lg:text-lg lg:leading-10">
           <p>
             歡迎任何工作邀約或接案機會！
             <br />
@@ -404,18 +406,18 @@ const HomePage = () => {
         </div>
       </div>
       {/* 視差背景3-Project timeLine */}
-      <div className="relative h-[2200px] w-screen overflow-hidden">
+      <div className="relative h-[1700px] w-screen overflow-hidden lg:h-[2200px]">
         <div
-          className="h-[2200px] w-full bg-[url('/bg-2.jpeg')] bg-cover"
+          className="h-[1700px] w-full bg-[url('/bg-2.jpeg')] bg-cover lg:h-[2200px]"
           style={{ transform: `translateY(${scrollPosition * 0.6 - 1600}px)` }}
         >
           <div className="h-full w-full bg-[#4D5A79]/90"></div>
         </div>
       </div>
       {/* 視差背景4-Contact */}
-      <div className="relative h-[500px] w-screen overflow-hidden">
+      <div className="relative h-[360px] w-screen overflow-hidden lg:h-[500px]">
         <div
-          className="h-[800px] w-full bg-[url('/bg-3.jpg')] bg-cover"
+          className="h-[1000px] w-full bg-[url('/bg-3.jpg')] bg-cover lg:h-[1000px]"
           style={{ transform: `translateY(${scrollPosition * 0.6 - 2800}px)` }}
         >
           <div className="h-full w-full bg-[#182138]/80"></div>

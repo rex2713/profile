@@ -9,11 +9,11 @@ const HeaderNavBar = ({
 }) => {
   const location = useLocation();
   return (
-    <div className="absolute left-0 top-0 z-10 h-20 w-full bg-white bg-opacity-10 px-40 py-5 shadow-md">
-      <div className="flex justify-between gap-x-48 px-[200px] leading-10 text-white/80">
+    <div className="absolute left-0 top-0 z-10 h-20 w-full bg-white bg-opacity-10 py-5 shadow-md lg:px-40">
+      <div className="flex justify-between gap-x-48 leading-10 text-white/80 lg:px-[200px]">
         <img className="w-10" src="/icon/R-Logo.png" />
         <div
-          className={`flex justify-start text-nowrap ${location.pathname == "/" ? "gap-x-6" : "gap-x-10"} font-extralight`}
+          className={`hidden justify-start text-nowrap lg:flex ${location.pathname == "/" ? "gap-x-6" : "gap-x-10"} font-extralight`}
         >
           <Link to="/" className="hover:cursor-pointer hover:text-[#00D646]">
             HOME
