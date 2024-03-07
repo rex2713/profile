@@ -13,7 +13,7 @@ const HeaderNavBar = ({
       <div className="flex justify-between gap-x-48 px-[200px] leading-10 text-white/80">
         <img className="w-10" src="/icon/R-Logo.png" />
         <div
-          className={`flex justify-start ${location.pathname == "/" ? "gap-x-6" : "gap-x-10"} font-extralight`}
+          className={`flex justify-start text-nowrap ${location.pathname == "/" ? "gap-x-6" : "gap-x-10"} font-extralight`}
         >
           <Link to="/" className="hover:cursor-pointer hover:text-[#00D646]">
             HOME

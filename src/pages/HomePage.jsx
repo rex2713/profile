@@ -18,7 +18,7 @@ const HomePage = () => {
   });
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     const handleScroll = () => {
       const position = window.scrollY;
       // console.log(window.scrollY);
@@ -88,7 +88,7 @@ const HomePage = () => {
         scrollToContact={scrollToContact}
       />
       {/* 主標題 */}
-      <div className="absolute left-[35vw] top-[30vh] z-10 text-[65px] font-black tracking-[0.3em] text-white">
+      <div className="absolute left-0 right-0 top-[20vh] z-10 text-[65px] font-black tracking-[0.3em] text-white lg:top-[30vh]">
         <p>
           I<span className="text-[#00D646]">'</span>m
         </p>
@@ -101,10 +101,10 @@ const HomePage = () => {
         </p>
       </div>
       {/* 簡介 */}
-      <div className=" absolute top-[800px] z-10 mx-[320px] h-[800px] bg-[#333B50] p-20">
+      <div className=" absolute top-[700px] z-10  bg-[#333B50] p-20 lg:top-[800px] lg:mx-[320px]">
         <section className="flex flex-col gap-14">
           <img src="/icon/R-Logo.png" alt="" className="mx-auto w-20" />
-          <p className="text-center text-lg font-light leading-10 tracking-normal text-white">
+          <p className="h-60 overflow-y-auto text-center text-lg font-light leading-10 tracking-normal text-white xl:h-full">
             ​您好！我是Rex，歡迎來到我的網站。
             <br />
             我畢業於慈濟大學，並任職於Evolution探索教育工作了四年半，在這段期間，我承擔了多樣化的角色，包括規劃營隊、設計教案、廣告投放、課程講師等，這使我不斷挑戰自我，更展現了我對於新事物的快速適應與學習成長能力。
@@ -128,61 +128,61 @@ const HomePage = () => {
       {/* Profession skill */}
       <div
         ref={professionRef}
-        className="absolute left-0 right-0 top-[1700px] z-10 flex flex-col gap-5"
+        className="absolute left-0 right-0 top-[1400px] z-10 flex flex-col gap-5 lg:top-[1700px]"
       >
-        <h2 className="text-[50px] font-extrabold tracking-[0.2em] text-white">
+        <h2 className="text-[24px] font-extrabold tracking-[0.2em] text-white lg:text-[50px]">
           01 PROFESSIONAL
         </h2>
-        <p className="text-[30px] font-thin tracking-[0.2em] text-white">
+        <p className="text-[14px] font-normal tracking-[0.2em] text-white lg:text-[30px] lg:font-thin">
           MY KNOWLEDGE IN SOFTWARE
         </p>
-        <div className="mx-[320px] flex flex-col gap-y-10 rounded-3xl bg-white/45 p-20">
-          <ul className="flex justify-between">
+        <div className="mx-8 flex justify-around gap-y-10 rounded-3xl bg-white/45 px-4 py-16 lg:mx-[320px] lg:flex-col lg:p-20">
+          <ul className="flex flex-col justify-between gap-y-8 lg:flex-row">
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-1.png')]  bg-contain bg-no-repeat delay-100 duration-[2s] ${
+              className={`h-28 w-28  bg-[url('/icon/profession-1.png')] bg-contain  bg-center bg-no-repeat delay-100 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-2.png')] bg-contain bg-no-repeat delay-300 duration-[2s] ${
+              className={`h-28 w-28  bg-[url('/icon/profession-2.png')] bg-contain bg-center bg-no-repeat delay-300 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-3.png')] bg-contain bg-no-repeat delay-500 duration-[2s] ${
+              className={`h-28 w-28  bg-[url('/icon/profession-3.png')] bg-contain bg-center bg-no-repeat delay-500 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-4.png')] bg-contain bg-no-repeat delay-700 duration-[2s] ${
+              className={`h-28 w-28  bg-[url('/icon/profession-4.png')] bg-contain bg-center bg-no-repeat delay-700 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-5.png')] bg-contain bg-no-repeat delay-[900ms] duration-[2s] ${
+              className={`h-28 w-28  bg-[url('/icon/profession-5.png')] bg-contain bg-center bg-no-repeat delay-[900ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
           </ul>
-          <ul className="flex justify-around px-10">
+          <ul className="flex flex-col justify-around lg:flex-row lg:px-10">
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-6.png')] bg-contain bg-no-repeat delay-[200ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-6.png')] bg-contain bg-center bg-no-repeat delay-[200ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-7.png')] bg-contain bg-no-repeat delay-[400ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-7.png')] bg-contain bg-center bg-no-repeat delay-[400ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
               style={{ transitionDelay: "5s", transition: "" }}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-8.png')] bg-contain bg-no-repeat delay-[600ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-8.png')] bg-contain bg-center  bg-no-repeat delay-[600ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-9.png')] bg-contain bg-no-repeat delay-[800ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-9.png')] bg-contain bg-center  bg-no-repeat delay-[800ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
@@ -194,20 +194,20 @@ const HomePage = () => {
         ref={projectRef}
         className="absolute left-0 right-0 top-[2500px] z-10 flex flex-col gap-5"
       >
-        <h2 className="text-[50px] font-extrabold tracking-[0.2em] text-white">
+        <h2 className="text-[24px] font-extrabold tracking-[0.2em] text-white lg:text-[50px]">
           02 PROJECT
         </h2>
-        <p className="text-[30px] font-extrabold tracking-[0.2em] text-[#FFD96D]">
+        <p className="text-[20px] font-extrabold tracking-[0.2em] text-[#FFD96D] lg:text-[30px]">
           台北排球人地圖
           <br />
           TAIPEI VOLLEYBALL MAP
         </p>
-        <p className="mb-10 text-[22px] font-thin tracking-[0.2em] text-white">
+        <p className="mb-10 text-[16px] font-thin tracking-[0.2em] text-white lg:text-[22px]">
           讓煩擾找球友變成輕鬆交朋友
         </p>
         {/* timeLine */}
         <div
-          className={`relative mx-auto h-[650px] w-[2px] bg-[#00D646] duration-[2s]
+          className={`duration-[2s]xw relative left-10 h-[650px] w-[2px] bg-[#00D646] lg:left-0 lg:mx-auto
           ${timeVisible.timeOne ? "opacity-100" : "opacity-0"}`}
         >
           {/* 時間1 */}
@@ -216,14 +216,16 @@ const HomePage = () => {
             ${timeVisible.timeOne ? "opacity-100" : "opacity-0"}`}
           >
             <article
-              className={`absolute -top-2 left-14 w-[400px] text-left duration-[2s]
+              className={`absolute -top-2 left-8 w-[280px] text-left duration-[2s] lg:left-14 lg:w-[400px]
               ${timeVisible.timeOne ? "translate-x-0" : "-translate-x-full"}`}
             >
-              <p className="tracking-wider text-[#00D646]">2023.11~2023.12</p>
-              <p className="my-2 text-nowrap text-2xl tracking-wider text-white">
+              <p className="text-sm tracking-wider text-[#00D646] lg:text-base">
+                2023.11~2023.12
+              </p>
+              <p className="my-2 text-nowrap text-xl tracking-wider text-white lg:text-2xl">
                 ​學習網站基礎
               </p>
-              <p className="text-nowrap text-lg font-light tracking-wider text-white">
+              <p className="text-nowrap text-base font-light tracking-wider text-white lg:text-lg">
                 HTML、CSS、JavaScript
               </p>
               <p className="text-base font-thin tracking-wider text-white">
@@ -237,14 +239,16 @@ const HomePage = () => {
             ${timeVisible.timeTwo ? "opacity-100" : "opacity-0"}`}
           >
             <article
-              className={`absolute -left-[440px] -top-2 w-[400px] text-right duration-[2s]
+              className={`absolute -top-2 left-8 w-[280px] text-left duration-[2s] lg:-left-[440px] lg:w-[400px] lg:text-right
               ${timeVisible.timeTwo ? "translate-x-0" : "translate-x-full"}`}
             >
-              <p className="tracking-wider text-[#00D646]">2023.12-2024.01</p>
-              <p className="my-2 text-2xl tracking-wider text-white">
+              <p className="text-sm tracking-wider text-[#00D646] lg:text-base">
+                2023.12-2024.01
+              </p>
+              <p className="my-2 text-xl tracking-wider text-white lg:text-2xl">
                 ​自學基礎後端＆專案前期調研
               </p>
-              <p className="text-lg font-light tracking-wider text-white">
+              <p className="text-base font-light tracking-wider text-white lg:text-lg">
                 專案前期調研、同步自學基礎後端（Node.js、Express.js、MongoDB）
               </p>
               <p className="text-justify text-base font-thin tracking-wider text-white">
@@ -261,7 +265,7 @@ const HomePage = () => {
           </div>
           {/* 時間3 */}
           <div
-            className={`absolute -left-2 top-[440px] h-4 w-4 rounded-full bg-[#00D646] duration-[2s]
+            className={`absolute -left-2 top-[500px] h-4 w-4 rounded-full bg-[#00D646] duration-[2s] lg:top-[440px]
             ${timeVisible.timeThree ? "opacity-100" : "opacity-0"}`}
           >
             <article
@@ -378,7 +382,7 @@ const HomePage = () => {
 
       {/* 視差背景1-I'M REX CHEN. */}
       <div
-        className="relative h-[1200px] w-screen overflow-hidden"
+        className="relative h-[1200px] min-w-full overflow-hidden"
         style={{ perspective: "1px" }}
       >
         <div
