@@ -241,7 +241,7 @@ const ProjectPage = () => {
             </div>
             <div className="w-[200px] px-8 text-center font-thin leading-10 tracking-wide text-white lg:w-[600px]">
               <p className="pb-2 text-xl font-normal">加入隊伍＆創建隊伍</p>
-              <p className="h-[100px] overflow-auto lg:max-h-screen">
+              <p className="h-[100px] overflow-auto lg:h-full">
                 在已登入的狀態下，可在隊伍列表頁面尋找想加入的隊伍，點擊＋號即可加入該隊伍，如果已在隊伍中則會跳出通知訊息。創建隊伍頁面，除了隊伍資料填寫以外，系統會自動從使用者資料庫中撈取隨機十筆用戶，讓隊長可以從中挑選隊友加入隊伍。
               </p>
             </div>
@@ -261,7 +261,7 @@ const ProjectPage = () => {
           <div className="flex items-center justify-between">
             <div className="w-[200px] px-8 pt-6 text-center font-thin leading-10 tracking-wide text-white lg:w-[600px]">
               <p className="pb-2 text-xl font-normal">隊伍通訊</p>
-              <p className="h-[100px] overflow-auto lg:max-h-screen">
+              <p className="h-[100px] overflow-auto lg:h-full">
                 同一隊伍的隊員，可在隊伍管理頁面中，點擊"詳細資訊"按鈕，進入隊伍頁面，底部的留言板可供隊友們進行溝通交流。
               </p>
             </div>
