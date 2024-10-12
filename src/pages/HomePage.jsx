@@ -362,13 +362,13 @@ const HomePage = () => {
             >
               <img src="/icon/Link-In.png" alt="Link-In-icon" />
             </a>
-            <a
+            {/* <a
               target="_blank"
               href="https://github.com/rex2713"
               className="w-12"
             >
               <img src="/icon/GitHub.png" alt="" />
-            </a>
+            </a> */}
             <a
               target="_blank"
               href="https://line.me/ti/p/78gvfuhpP6"
