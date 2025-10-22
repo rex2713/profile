@@ -103,16 +103,12 @@ const HomePage = () => {
         </p>
       </div>
       {/* 簡介 */}
-      <div className=" absolute top-[700px] z-10  bg-[#333B50] p-20 lg:top-[800px] lg:mx-[320px]">
-        <section className="flex flex-col gap-14">
+      <div className="absolute top-[700px] z-10  bg-[#333B50] px-4 md:px-10 lg:px-20 py-20 lg:top-[800px] lg:w-[840px] mx-auto left-0 right-0">
+        <section className="flex flex-col gap-10">
           <img src="/icon/R-Logo.png" alt="" className="mx-auto w-20" />
-          <p className="h-60 overflow-y-auto text-center text-lg font-light leading-10 tracking-normal text-white xl:h-full">
-            ​您好！我是Rex，歡迎來到我的網站。
-            <br />
-            我畢業於慈濟大學，並任職於Evolution探索教育工作了四年半，在這段期間，我承擔了多樣化的角色，包括規劃營隊、設計教案、廣告投放、課程講師等，這使我不斷挑戰自我，更展現了我對於新事物的快速適應與學習成長能力。
-            <br />
-            因個人規劃及未來發展等因素，於2023年9月決定轉職，故於2023年11月參與了台北商業大學的互動式前端網頁設計與開發實務班，學習HTML、CSS、JavaScript、TailwindCSS等前端知識，並同步自學相關的後端應用，包含Node.js、Express.js、MongoDB、Mongoose等，並於2024年1月開始第一個ＭERN專案建置，目前已完成此專案的架設（持續更新完善中）。​
-            ​
+          <p className="h-60 overflow-y-auto text-center text-lg font-light leading-10 tracking-normal text-white">
+            ​您好！我是Rex，歡迎來到我的網站。<br/>
+            我是一名前端工程師，具備教育與科技跨領域背景。<br/>過去在教育領域推動課程設計與學習體驗優化，<br/>現專注於使用 React、Next、TailwindCSS 等技術打造高互動性產品。<br/>擅長結合教育思維與前端技術，從使用者需求出發創造流暢的學習體驗。
           </p>
           <button
             onClick={() => {
@@ -130,7 +126,7 @@ const HomePage = () => {
       {/* Profession skill */}
       <div
         ref={professionRef}
-        className="absolute left-0 right-0 top-[1400px] z-10 flex flex-col gap-5 lg:top-[1700px]"
+        className="absolute left-0 right-0 top-[1400px] z-10 flex flex-col gap-5 lg:top-[1550px] px-10"
       >
         <h2 className="text-[24px] font-extrabold tracking-[0.2em] text-white lg:text-[50px]">
           01 PROFESSIONAL
@@ -138,53 +134,87 @@ const HomePage = () => {
         <p className="text-[14px] font-normal tracking-[0.2em] text-white lg:text-[30px] lg:font-thin">
           MY KNOWLEDGE IN SOFTWARE
         </p>
-        <div className="mx-8 flex justify-around gap-y-10 rounded-3xl bg-white/45 px-4 py-16 lg:mx-[320px] lg:flex-col lg:p-20">
-          <ul className="flex flex-col justify-between gap-y-8 lg:flex-row">
+        <div className="mx-8 flex justify-around gap-y-10 rounded-3xl bg-white/45 px-4 py-16 lg:flex-col lg:p-20 w-full md:w-[500px] lg:w-[840px] mx-auto left-0 right-0">
+          {/* 第一行 - 5個圖檔 */}
+          <ul className="flex flex-col justify-center gap-y-8 lg:flex-row lg:justify-around lg:gap-y-0">
             <li
-              className={`h-28 w-28  bg-[url('/icon/profession-1.png')] bg-contain  bg-center bg-no-repeat delay-100 duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-1.png')] bg-contain bg-center bg-no-repeat delay-100 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28  bg-[url('/icon/profession-2.png')] bg-contain bg-center bg-no-repeat delay-300 duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-2.png')] bg-contain bg-center bg-no-repeat delay-300 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28  bg-[url('/icon/profession-3.png')] bg-contain bg-center bg-no-repeat delay-500 duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-3.png')] bg-contain bg-center bg-no-repeat delay-500 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28  bg-[url('/icon/profession-4.png')] bg-contain bg-center bg-no-repeat delay-700 duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-4.png')] bg-contain bg-center bg-no-repeat delay-700 duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28  bg-[url('/icon/profession-5.png')] bg-contain bg-center bg-no-repeat delay-[900ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-5.png')] bg-contain bg-center bg-no-repeat delay-[900ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
           </ul>
-          <ul className="flex flex-col justify-around lg:flex-row lg:px-10">
+          {/* 第二行 - 5個圖檔 */}
+          <ul className="flex flex-col justify-center gap-y-8 lg:flex-row lg:justify-around lg:gap-y-0">
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-6.png')] bg-contain bg-center bg-no-repeat delay-[200ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-6.png')] bg-contain bg-center bg-no-repeat delay-[1100ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-7.png')] bg-contain bg-center bg-no-repeat delay-[400ms] duration-[2s] ${
-                iconVisible ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ transitionDelay: "5s", transition: "" }}
-            ></li>
-            <li
-              className={`h-28 w-28 bg-[url('/icon/profession-8.png')] bg-contain bg-center  bg-no-repeat delay-[600ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-7.png')] bg-contain bg-center bg-no-repeat delay-[1300ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
             <li
-              className={`h-28 w-28 bg-[url('/icon/profession-9.png')] bg-contain bg-center  bg-no-repeat delay-[800ms] duration-[2s] ${
+              className={`h-28 w-28 bg-[url('/icon/profession-8.png')] bg-contain bg-center bg-no-repeat delay-[1500ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-9.png')] bg-contain bg-center bg-no-repeat delay-[1700ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-10.png')] bg-contain bg-center bg-no-repeat delay-[1900ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+          </ul>
+          {/* 第三行 - 5個圖檔 */}
+          <ul className="flex flex-col justify-center gap-y-8 lg:flex-row lg:justify-around lg:gap-y-0">
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-11.png')] bg-contain bg-center bg-no-repeat delay-[2100ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-12.png')] bg-contain bg-center bg-no-repeat delay-[2300ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-13.png')] bg-contain bg-center bg-no-repeat delay-[2500ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-14.png')] bg-contain bg-center bg-no-repeat delay-[2700ms] duration-[2s] ${
+                iconVisible ? "opacity-100" : "opacity-0"
+              }`}
+            ></li>
+            <li
+              className={`h-28 w-28 bg-[url('/icon/profession-15.png')] bg-contain bg-center bg-no-repeat delay-[2900ms] duration-[2s] ${
                 iconVisible ? "opacity-100" : "opacity-0"
               }`}
             ></li>
@@ -309,8 +339,8 @@ const HomePage = () => {
             className={` transition-all delay-[1s] duration-[2s]
           ${timeVisible.timeFour ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="flex flex-col gap-5">
-              <div className="mx-8 flex flex-col gap-y-4 rounded-2xl bg-white/45 px-4 py-2 lg:mx-[280px] lg:gap-y-8 lg:rounded-[80px] lg:px-20 lg:py-10">
+            <div className="flex flex-col gap-5 px-10">
+              <div className="mx-8 flex flex-col gap-y-4 rounded-2xl bg-white/45 px-4 py-2 lg:gap-y-8 lg:rounded-[80px] lg:px-20 lg:py-10 w-full lg:w-[840px] mx-auto left-0 right-0">
                 <p className="text-justify text-sm font-light leading-8 tracking-widest text-white lg:text-xl lg:font-normal">
                   ​我和夥伴（兩人小組）都是排球運動背景，​因此對排球圈的功能需求非常了解，在經過詳細的調研和問券調查驗證後，我們決定打造一個快速組隊及尋找球場的平台，專為需要尋找隊友的排球愛好者而設，我們的目標是消除揪團組隊所帶來的阻礙，讓出門運動變得更加順暢！
                 </p>
@@ -333,17 +363,15 @@ const HomePage = () => {
       {/* Contact */}
       <div
         ref={contactRef}
-        className="absolute left-0 right-0 top-[4000px] z-10 mx-10 bg-[#333B4F] pb-10 pt-0 text-center lg:top-[4450px] lg:mx-[300px] lg:h-[500px] lg:pt-10 "
+        className="absolute left-0 right-0 top-[4160px] z-10 mx-10 bg-[#333B4F] pb-10 pt-0 text-center lg:top-[4450px] lg:mx-[300px] lg:h-[400px] lg:pt-10 "
       >
         <h2 className="py-8 text-2xl font-semibold tracking-[0.1em] text-white lg:text-[40px]">
           CONTACT
         </h2>
         <div className="mx-6 flex flex-col items-center text-base font-thin leading-6 tracking-wider text-white/70 lg:mx-0 lg:text-lg lg:leading-10">
-          <p>
-            歡迎任何工作邀約或接案機會！
-            <br />
-            若您有任何合作計畫或專案需求，請隨時與我聯繫
-          </p>
+          {/* <p>
+            若有任何問題，歡迎隨時與我聯繫
+          </p> */}
           <div className="text-left tracking-widest text-white">
             <a
               className="hover:text-yellow-300"
@@ -378,7 +406,7 @@ const HomePage = () => {
             </a>
           </div>
           <br />
-          <p>期待與您的合作！</p>
+          {/* <p>期待與您的合作！</p> */}
         </div>
       </div>
 
