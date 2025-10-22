@@ -363,7 +363,7 @@ const HomePage = () => {
       {/* Contact */}
       <div
         ref={contactRef}
-        className="absolute left-0 right-0 top-[4160px] z-10 mx-10 bg-[#333B4F] pb-10 pt-0 text-center lg:top-[4450px] lg:mx-[300px] lg:h-[400px] lg:pt-10 "
+        className="absolute left-0 right-0 top-[4160px] z-10 mx-10 bg-[#333B4F] pb-10 pt-0 text-center lg:top-[4450px] lg:h-[400px] lg:pt-10 lg:w-[840px] mx-10 lg:mx-auto left-0 right-0"
       >
         <h2 className="py-8 text-2xl font-semibold tracking-[0.1em] text-white lg:text-[40px]">
           CONTACT
