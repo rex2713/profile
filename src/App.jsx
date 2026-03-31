@@ -1,17 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { HashRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ProjectPage from "./pages/ProjectPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/project" element={<ProjectPage />}></Route>
+        <Route path="/" element={<HomePage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
