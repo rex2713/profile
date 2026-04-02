@@ -24,9 +24,9 @@ export default function AboutMe() {
                 isDark ? 'bg-dark-card' : 'bg-gray-100'
               }`}>
                 <img
-                  src="/profile.jpg"
+                  src="/photo.jpg"
                   alt="Rex Chen"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-[80%]"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement.innerHTML =
